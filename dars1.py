@@ -24,13 +24,7 @@ def order(sentence):
     order_items = sentence.split(" ")
     for order_item in order_items:
         order_item.split(" ")
-    
-    
-   
-    
-    
-    
-    
+       
 word = "is2 Thi1s T4est 3a"
 print(order(word))
 <========================================> 😏Tugatilmadi <========================================>"""
@@ -78,7 +72,7 @@ print(get_middle(s))
 #boshqa narsalarni "yoqtirishi" mumkin. Biz bunday element yonida ko'rsatilishi kerak bo'lgan matnni yaratmoqchimiz.
 
 def likes(names):
-    n = len(names)              #names ro'yhatini uzunligini olyapman n ga
+    n = len(names)              
     if   n == 0: return f"no one likes this"
     
     elif n == 1: return f"{names[0]} likes this"
