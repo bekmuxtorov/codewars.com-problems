@@ -6,17 +6,18 @@ def add_binary(a,b):
 print(f"{add_binary(1,1)}")
 <========================================>😎Bajarildi<========================================>"""
 
-"""<========================================> 2-masala <========================================>
-def persistence(n,m):
+#<========================================> 2-masala <========================================>
+"""
+def persistence(n):
     n_sections = [int(x) for x in str(n)]
     s = 1
     for n_section in n_sections:
         s *= n_section
-    for m_item in range(0,m):
-        persistence(s,m)
+    return s
 
-# print(persistence(39, 3))
-<========================================> 😏Tugatilmadi <========================================>"""
+print(persistence(39))
+"""
+#<========================================> 😏Tugatilmadi <========================================>
 
 """<========================================> 3-masala <========================================>
 
@@ -67,7 +68,7 @@ print(get_middle(s))
 
 
 
-"""<========================================> 5-masala <========================================>"""
+"""<========================================> 6-masala <========================================>
 #“Like” tizimini Facebook va boshqa sahifalardan bilsangiz kerak. Odamlar blog yozuvlari, rasmlari yoki
 #boshqa narsalarni "yoqtirishi" mumkin. Biz bunday element yonida ko'rsatilishi kerak bo'lgan matnni yaratmoqchimiz.
 
@@ -85,10 +86,44 @@ def likes(names):
     
 names = ["asadbek", "bobur", "gani", "boltaboy","gishmat"]
 print(likes(names))
+<========================================>😎Bajarildi<========================================>"""
 
 
+#<========================================> 7-masala <========================================>
+"""
+The goal of this exercise is to convert a string to a new string where each character in the new 
+string is "(" if that character appears only once in the original string, or ")" if that character
+appears more than once in the original string. Ignore capitalization when determining if a character 
+is a duplicate.
+def dublicate_encode(word):
+    n = len(word)
+    return f"{'('*n}"
+
+word = "Asadbek"
+print(dublicate_encode(word))
+"""
+#<========================================> 😏Tugatilmadi <========================================>"""
 
 
+#<========================================> 8-masala <========================================>
+"""PROBLEM:Berilgan qatordagi unlilar sonini (hisobini) qaytaring.
+Bu Kata uchun a, e, i, o, u unlilari sifatida qaraymiz (lekin y emas).
+Kirish qatori faqat kichik harflar va/yoki bo'shliqlardan iborat bo'ladi."""
+
+def get_count(sentence):
+    sentence = sentence.lower()
+    vowal_letters = ["a", "e", "i", "o", "u"]
+    count = 0
+    sentence_letters = [str(x) for x in str(sentence)]
+    for sentence_letter in sentence_letters:
+        for vowal_letter in vowal_letters:
+            if sentence_letter == vowal_letter:
+                count += 1 
+    return count
+
+word = "Asadbek"
+print(get_count(word))
+#<========================================>😎Bajarildi<========================================>
 
 
 
