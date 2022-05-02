@@ -109,7 +109,7 @@ print(dublicate_encode(word))
 """PROBLEM:Berilgan qatordagi unlilar sonini (hisobini) qaytaring.
 Bu Kata uchun a, e, i, o, u unlilari sifatida qaraymiz (lekin y emas).
 Kirish qatori faqat kichik harflar va/yoki bo'shliqlardan iborat bo'ladi."""
-
+"""
 def get_count(sentence):
     sentence = sentence.lower()
     vowal_letters = ["a", "e", "i", "o", "u"]
@@ -123,9 +123,41 @@ def get_count(sentence):
 
 word = "Asadbek"
 print(get_count(word))
+"""
 #<========================================>😎Bajarildi<========================================>
 
 
+#<========================================> 9-masala <========================================>
+"""PROBLEM: ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+If the function is passed a valid PIN string, return true, else return false."""
+"""
+def validate_pin(pin):
+    n = len(pin)
+    if n == 0:
+        return False
+    
+    pin_items = [str(x) for x in str(pin)]
+    numbers = ["1","2","3","4","5","6","7","8","9","0"]
+    
+    for pin_item in pin_items:
+        if (pin_item in numbers) and ((n == 4) or (n == 6)):
+            return True
+        
+        else:
+            return False
+        
+pin = "123-"
+print(validate_pin(pin)) 
+To'liq tugatilmadi'
+"""
+
+# saytdan ko'chirildi
+def validator_pin(pin):
+    return len(pin) in (4,6) and pin.isdigit()
+
+pin = "1234"
+print(validator_pin(pin))
+#<========================================>😎Bajarildi<========================================>
 
 
 
