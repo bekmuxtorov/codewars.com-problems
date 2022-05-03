@@ -149,7 +149,7 @@ def validate_pin(pin):
 pin = "123-"
 print(validate_pin(pin)) 
 To'liq tugatilmadi'
-"""
+
 
 # saytdan ko'chirildi
 def validator_pin(pin):
@@ -157,15 +157,54 @@ def validator_pin(pin):
 
 pin = "1234"
 print(validator_pin(pin))
+
+"""
 #<========================================>😎Bajarildi<========================================>
 
 
+#<========================================> 10-masala <========================================>
+"""There is an array with some numbers. All numbers are equal except for one. Try to find it!"""
+"""
+def find_uniq(arr):
+    arr_counts = {}
+    keys = []
+    for i in range(len(arr)):
+        arr_counts[arr.count(arr[i])] = arr[i]
+        keys.append(arr.count(arr[i]))
+
+    return arr_counts[min(keys)] 
+ 
+arr = [1,1,1,20,20]
+print(find_uniq(arr))"""
+#<========================================> 😏Tugatilmadi <========================================>"""
 
 
+#<========================================> 11-masala <========================================>
+"""You might know some pretty large perfect squares. But what about the NEXT one?
+Complete the findNextSquare method that finds the next integral perfect square after the one passed as a parameter. Recall that an integral perfect square is an integer n such that sqrt(n) is also an integer.
+If the parameter is itself not a perfect square then -1 should be returned. You may assume the parameter is non-negative.
+"""
+"""
+import math
+def find_next_square(sq):
+    sq_number = math.sqrt(sq)
+    
+    if (sq_number).is_integer():
+        return int((sq_number+1)**2)
+    else: return -1
+    
+sq = 225
+print(find_next_square(sq))
+"""
+#<========================================>😎Bajarildi<========================================>
 
 
+#<========================================> 12-masala <========================================>
+"""Given an array of ones and zeroes, convert the equivalent binary value to an integer.
+Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.
+"""
 
-
+    
 
 
 
