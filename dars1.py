@@ -391,13 +391,124 @@ def narcissistic(value: int) -> bool:
     return value == s
 
 print(narcissistic(153))
-"""
+
 #saytdagi yechim:
 def narcissistic(value):
     return value == sum(int(x)**len(str(value)) for x in len(value))
+"""
+#<========================================> 18-masala <========================================>
+"""
+Bola baland binoning n-qavatida to'p bilan o'ynamoqda. Bu qavatning balandligi h ma'lum.
 
+U to'pni derazadan tashlab yuboradi. To'p o'z balandligining uchdan ikki qismiga (masalan, 0,66) sakraydi.
+
+Onasi yerdan 1,5 metr naridagi derazadan tashqariga qaraydi.
+
+Ona to'pning deraza oldidan o'tishini necha marta ko'radi (shu jumladan u yiqilib, sakrab tushayotganda?
+
+To'g'ri tajriba uchun uchta shart bajarilishi kerak:
+Float parametri "h" metrda 0 dan katta bo'lishi kerak
+Float parametri "bounce" 0 dan katta va 1 dan kichik bo'lishi kerak
+Float parametri "oyna" h dan kichik bo'lishi kerak.
+Agar yuqoridagi uchta shart bajarilsa, ijobiy butun sonni qaytaring, aks holda -1 ni qaytaring.
+"""
+"""
+def bouncing_ball(h,window, bounce = 2/3):
+    if h > 0 and 0< bounce < 1 and window < h:
+        heights = []
+        while True:
+            if h*bounce < window:
+                return False
+            heights.append(h*bounce)
+
+        
+        
     
-            
+    else:
+        return -1     
+print(bouncing_ball(81,1.5))    
+"""
+"""
+import random
+one = True * True #return 1
+zero = True * False #rettrn 0
+numbers = []
+
+hundred = f"{one}{zero}{zero}"
+for number in range(one, int(hundred)+1):
+    numbers.append(number)
+    
+number_index = random.randint(one,int(hundred))
+print(f"Kesib olingan son: {numbers[number_index]}")
+numbers.pop(number_index)
+print(numbers)    
+
+
+
+words = input("Matnni kiriting: ")
+print(words.split(" "))
+print(len(words.split(" ")))
+"""
+
+#<========================================> 19-masala <========================================>
+def domain_name(url):
+    if url.index(".") == 10:
+        begin = 11
+        end = url.rindex(".")
+
+    elif url.index(".") == 3:
+        begin = 4
+        end = url.rindex(".")
+       
+    elif url.index("/") == 5:
+        begin = url.index("/") + 2
+        end =   url.index(".")
+        
+    return url[begin:end]
+
+url1 = "http://google.co.jp"
+url2 = "www.xakep.ru"
+url3 = "http://www.zombie-bites.com"
+print(domain_name(url3))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
