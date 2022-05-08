@@ -469,7 +469,7 @@ def domain_name(url):
 url1 = "http://google.co.jp"
 url2 = "www.xakep.ru"
 url3 = "http://www.zombie-bites.com"
-print(domain_name(url3))
+print(domain_name(url1))
 
 
 
