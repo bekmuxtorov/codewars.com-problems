@@ -451,25 +451,71 @@ print(len(words.split(" ")))
 """
 
 #<========================================> 19-masala <========================================>
-def domain_name(url):
-    if url.index(".") == 10:
-        begin = 11
-        end = url.rindex(".")
+# def domain_name(url):
+#     url_letter = ['h','t','p',':','/','w']
+#     url_items = [str(i) for i in str(url)] 
+#     for url_item in url_items:
+#         if url_item in url_letter:
+#             url_items.remove(url_item)
+   
+            
+#     return str(url_items)
 
-    elif url.index(".") == 3:
-        begin = 4
-        end = url.rindex(".")
-       
-    elif url.index("/") == 5:
-        begin = url.index("/") + 2
-        end =   url.index(".")
+# url1 = "http://oogle.co.jp"
+# url2 = "www.xakep.ru"
+# url3 = "http://www.zombie-bites.com"
+# print(domain_name(url1))
+# You are given an array (which will have a length of at least 3, but could
+# be very large) containing integers. The array is either entirely comprised
+# of odd integers or entirely comprised of even integers except for a single
+# integer N. Write a method that takes the array as an argument and returns
+# this "outlier" N.
+# def find_outlier(integers):
+#     if sum(integers) % 2 == 0:
+#         for integer in integers:
+#             if integer % 2 == 0:
+#                 integers.remove(integer)
+#                 return integer
+    
+#     else:
+#         for integer in integers:
+#             if integer % 2 != 0:
+#                 integers.remove(integer)
+#                 return integer
+    
+# a_sonlar = [160, 3, 1719, 19, 11, 13, -21]
+# print(find_outlier(a_sonlar))
+
+#Bubblesort algorithms
+#Sort algorithms
+#bekmuxtorov
+
+def bubble(arr):
+    for i in range(len(arr)-1):
+        if arr[i] > arr[i+1]:
+            arr[i] , arr[i+1] = arr[i+1] , arr[i]
+    return arr
+
+def bubble_sort(arr):
+    for _ in range(len(arr)-1):
+        bubble(arr)
         
-    return url[begin:end]
+    return arr
+    
 
-url1 = "http://google.co.jp"
-url2 = "www.xakep.ru"
-url3 = "http://www.zombie-bites.com"
-print(domain_name(url1))
+
+
+
+
+a_numbers = [10,22,9,64,3]
+print(bubble_sort(a_numbers))
+
+
+    
+                
+    
+            
+            
 
 
 
