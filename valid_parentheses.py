@@ -1,27 +1,48 @@
-#codewars.com 
-#problem 10
-#bekmuxtorov
-# Write a function that takes a string of parentheses, and determines if the order of the parentheses 
-# is valid. The function should return true if the string is valid, and false if it's invalid.
+"""
+Berilgan qavslar to'g'ri yopilganligiga tekshiring.
+Qavslar - (), {}, [].
+Misol uchun:
+  valid_brackets("()()") = True
+  valid_brackets("{()[]}") = True
+  valid_brackets("{(]}") = False
+"""
 
+def valid_brackets(s: str) -> bool:
+    """
+    Kodni bu yerda yozing.
+    """
+    counter_1 = 0
+    counter_2 = 0
+    counter_3 = 0
 
-def valid_parentheses(string: str) -> bool:
-    counter = 0
-    
-    for character in string:
+    for character in s:
         if character == "(":
-            counter += 1
-            
+            counter_1 += 1
+        
         if character == ")":
-            counter -= 1
-            
-        if counter < 0:
+            counter_1 -= 1
+        
+        if counter_1 < 0:
             return False
-            
-    return counter == 0
+        
+        if character == "{":
+            counter_2 += 1
+        
+        if character == "}":
+            counter_2 -= 1
+        
+        if counter_2 < 0:
+            return False
+        
+        if character == "[":
+            counter_3 += 1
+        
+        if character == "]":
+            counter_3 -= 1
+        
+        if counter_3 < 0:
+            return False
 
-
-
-print(valid_parentheses("(()))("))
+    return counter_1 == 0 and counter_2 == 0 and counter_3 == 0
 
 #<========================================>😎Bajarildi<========================================>
