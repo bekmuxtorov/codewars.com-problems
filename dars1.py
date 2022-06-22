@@ -509,7 +509,7 @@ def bubble_sort(arr):
 
 a_numbers = [10,22,9,64,3]
 print(bubble_sort(a_numbers))
-
+print(f"Asadbek Muxtorov ") 
 
     
                 
