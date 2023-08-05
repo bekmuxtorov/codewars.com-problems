@@ -5,24 +5,24 @@
 
 
 def define_status(voters: list, name: str) -> str:
-    if name in voters.keys():
-        if voters[name]:
-            return "Siz avval ovoz bergansiz."
-        else:
-            voters[name] = True
-            return "Siz ovoz berishingiz mumkin."
-    else:
-        voters[name] = True
-        return voters, "Siz ro’yxatda yo’q ekansiz. Ro’yxatga qo’shildingiz. Ovoz berishingiz mumkin."
+    for voter in voters:
+        if voter['name'] == name:
+            if voter['is_voted']:
+                return "Siz avval ovoz bergansiz."
+            else:
+                voter.setdefault('is_voted', True)
+                return "Siz ovoz berishingiz mumkin."
+
+    voters.append({'name': name, 'is_voted': True})
+    return "Siz ro’yxatda yo’q ekansiz. Ro’yxatga qo’shildingiz. Ovoz berishingiz mumkin."
 
 
-# voters = {name: is_voted,}
-voters = {
-    'Asadbek': True,
-    'Palonchi': False,
-    'Pistonchi': False,
-}
-name = 'Palonchi'
+voters = [
+    {'name': 'Asadbek', 'is_voted': True},
+    {'name': 'Pistonchi', 'is_voted': False},
+    {'name': 'Palonchi', 'is_voted': False},
+]
+name = 'Kimsanboy'
 
 
 # <========================================> 2-masala <========================================>
